@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+	x:Class="GestureIssue.MainPage"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+	<ScrollView>
+		<VerticalStackLayout Padding="30,0" Spacing="25">
+
+
+			<Label x:Name="lbl" HorizontalTextAlignment="Center" />
+
+			<Image
+				Aspect="AspectFit"
+				HeightRequest="185"
+				SemanticProperties.Description="dot net bot in a race car number eight"
+				Source="dotnet_bot.png">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Tapped="OnetapGesture" />
+					<TapGestureRecognizer NumberOfTapsRequired="2" Tapped="TwotapGesture" />
+				</Image.GestureRecognizers>
+			</Image>
+
+			<Label x:Name="OneLog" Text="The OneTapGesture was fired: 0 times" />
+			<Label x:Name="TwoLog" Text="The TwoTapGesture was fired: 0 times" />
+
+		</VerticalStackLayout>
+	</ScrollView>
+
+</ContentPage>
